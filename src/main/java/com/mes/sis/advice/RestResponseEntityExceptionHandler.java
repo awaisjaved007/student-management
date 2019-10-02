@@ -60,7 +60,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     logger.error("409 Status Code", ex);
     final GenericResponse bodyOfResponse =
         new GenericResponse(
-            messages.getMessage("message.student.regError", null, request.getLocale()),
+            messages.getMessage("message.student.already.exists", null, request.getLocale()),
             "StudentAlreadyExist");
     return handleExceptionInternal(
         ex, bodyOfResponse, new HttpHeaders(), HttpStatus.CONFLICT, request);

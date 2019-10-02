@@ -20,4 +20,8 @@ public class CommonUtils {
       log.debug(log.isDebugEnabled() ? CommonUtils.concat(messages):null);
 
   }
+  public static void warn(Logger log,String ... messages) {
+    log.warn(log.isWarnEnabled() ? CommonUtils.concat(messages):null);
+
+  }
 }

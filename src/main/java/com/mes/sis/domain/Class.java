@@ -35,7 +35,7 @@ public class Class {
   @Fetch(FetchMode.JOIN)
   @OneToMany(
       mappedBy = "classId",
-      cascade = {CascadeType.REMOVE},
+      cascade = {CascadeType.PERSIST, CascadeType.MERGE},
       fetch = FetchType.EAGER)
   @JsonIgnore
   private Set<Enrollment> enrollments;

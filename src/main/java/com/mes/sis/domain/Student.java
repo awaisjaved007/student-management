@@ -44,7 +44,7 @@ public class Student {
 
   @OneToMany(
       mappedBy = "student",
-      cascade = {CascadeType.REMOVE})
+      cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JsonIgnore
   private Set<Enrollment> enrollments;
 

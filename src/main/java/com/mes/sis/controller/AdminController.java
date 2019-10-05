@@ -6,6 +6,7 @@ import com.mes.sis.utils.GenericResponse;
 import com.mes.sis.vo.request.ClassVO;
 import com.mes.sis.vo.request.EnrollmentVO;
 import com.mes.sis.vo.request.StudentVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ public class AdminController {
 
   private MessageSource messageSource;
 
+  @Autowired
   public AdminController(final AdminService adminService, final MessageSource messageSource) {
     this.adminService = adminService;
     this.messageSource = messageSource;
